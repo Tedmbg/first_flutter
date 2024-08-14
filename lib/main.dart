@@ -4,6 +4,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
+        backgroundColor: Color(0xFF020643),
         appBar: AppBar(
           title: Center(
               child: Text(
@@ -14,8 +15,24 @@ void main() {
           )),
           backgroundColor: Color(0xFFc0563f),
         ),
-        body: Text('Welcome'),
-        backgroundColor: Color(0xFF020643),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Welcome',
+                style: TextStyle(fontSize: 40, color: Colors.white),
+              ),
+              Image.asset(
+                'images/welcome.jpeg',
+                width: 100.0,
+                height: 100,
+                fit: BoxFit.fill,
+                colorBlendMode: BlendMode.dstATop,
+              ),
+            ],
+          ),
+        ),
       ),
     ),
   );
